@@ -170,6 +170,7 @@ function draw() {
 
     background(20)
     displayFlashcard()
+    displayProgress()
   
     // Update and show FPS
     fpsEngine.updateFPS()
