@@ -12,6 +12,7 @@ let shouldUseDefinitionAsFront = false
 /* Core Code */
 
 const instructionsFontSizeMultiplier = 1/18
+const border = 100
 
 let fpsEngine = {
     oldTime: 0, // Time at which the previous frame is updated
@@ -100,7 +101,7 @@ function displayFlashcard() {
     const backFontSize = !shouldUseDefinitionAsFront ? (cardHeight * definitionFontSizeMultiplier) : (cardHeight * termFontSizeMultiplier)
     const instructionsFontSize = cardHeight * instructionsFontSizeMultiplier
     
-    textAlign(CENTER, CENTER);
+    textAlign(CENTER, CENTER)
     const xCenter = windowWidth / 2
     const yCenter = windowHeight / 2
     
@@ -116,22 +117,22 @@ function displayFlashcard() {
     // Front
     textSize(frontFontSize)
     fill(20)
-    text(!shouldUseDefinitionAsFront ? currentCard.term : currentCard.definition, xCenter, frontCenter);
+    text(!shouldUseDefinitionAsFront ? currentCard.term : currentCard.definition, xCenter, frontCenterY);
   
     // Back
-    if (showAnswers)
+    if (isShowingAnswer)
         textSize(backFontSize)
         fill(100, 20, 20)
-        text(!shouldUseDefinitionAsFront ? currentCard.definition : currentCard.term, xCenter, backCenter)
+        text(!shouldUseDefinitionAsFront ? currentCard.definition : currentCard.term, xCenter, backCenterY)
   
     // Instructions
     let instructions = "click to show answers"
-    if (showAnswers) {
+    if (isShowingAnswer) {
         instructions = "click to switch card"
     }
     fill(100)
     textSize(instructionsFontSize)
-    text(instructions, xCenter, instructionsCenter)
+    text(instructions, xCenter, instructionsCenterY)
 }
 
 function displayProgress() {
@@ -150,10 +151,10 @@ function displayProgress() {
 }
   
 function mousePressed() {
-    if (showAnswers) {
+    if (isShowingAnswer) {
         cardSelect()
     }
-    showAnswers = !showAnswers
+    isShowingAnswer = !isShowingAnswer
 }
 
 function setup() {
