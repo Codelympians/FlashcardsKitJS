@@ -1,14 +1,14 @@
 /* Customizable Variables */
 
-var name = "FlashcardsKitJS Demo"
-var termFontSizeMultiplier = 1/7
-var definitionFontSizeMultiplier = 1/12
-var flashcards = []
-var congratulateCard = {
+let name = "FlashcardsKitJS Demo"
+let termFontSizeMultiplier = 1/7
+let definitionFontSizeMultiplier = 1/12
+let flashcards = []
+let congratulateCard = {
     term: "おめでとう!!",
     definition: "Congratulations!\n(You've completed one entire set.)",
 }
-var shouldUseDefinitionAsFront = false
+let shouldUseDefinitionAsFront = false
 
 /* Core Code */
 
@@ -17,6 +17,8 @@ const border = 100
 
 let cardWidth = null
 let cardHeight = null
+let xCenter = windowWidth / 2
+let yCenter = windowHeight / 2
 
 function recalibrate() {
     const xUsable = windowWidth - border;
@@ -71,8 +73,6 @@ function displayFlashcard() {
     const instructionsFontSize = cardHeight * instructionsFontSizeMultiplier
     
     textAlign(CENTER, CENTER)
-    const xCenter = windowWidth / 2
-    const yCenter = windowHeight / 2
     
     const frontCenterY = yCenter - cardHeight / 4
     const backCenterY = yCenter
