@@ -2,24 +2,24 @@
   "name": "Toki Pona Vocabulary",
   "congratulateCard": {
     "term": "ni li pona!",
-    "definition": "Congratulations!\n(You've completed one entire set.)",
+    "definition": "Congratulations!\n(You've completed one entire set.)"
   },
   "flashcards": [
     {
       "term": "a / kin",
-      "definition": "<PARTICLE>\n(emphasis, emotion, or confirmation)",
+      "definition": "<PARTICLE>\n(emphasis, emotion, or confirmation)"
     },
     {
       "term": "akesi",
-      "definition": "<NOUN> non-cute animal;\nreptile, amphibian",
+      "definition": "<NOUN> non-cute animal;\nreptile, amphibian"
     },
     {
       "term": "ala",
-      "definition": "<ADJECTIVE> no, not, zero",
+      "definition": "<ADJECTIVE> no, not, zero"
     },
     {
       "term": "alasa",
-      "definition": "<VERB> to hunt, forage",
-    },
-  ],
+      "definition": "<VERB> to hunt, forage"
+    }
+  ]
 }
