@@ -43,7 +43,7 @@ let deck = []
 function cardSelect() {
     if (deck.length === 0) {
         showCongratulateCard()
-        deck = flashcards
+        deck = flashcards.slice()
     } else {
         var chosenCard = Math.floor(Math.random() * deck.length)
         currentCard = deck.splice(chosenCard, 1)
