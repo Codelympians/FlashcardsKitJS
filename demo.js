@@ -1,3 +1,5 @@
+'use strict'
+
 function beginLoadJSON(filePath, shouldUseDefinitionAsFront) {
     loadJSON(filePath, didLoadJSON)
     shouldUseDefinitionAsFront = shouldUseDefinitionAsFront
@@ -10,6 +12,6 @@ function didLoadJSON(loadedJSON) {
 }
 
 // You can modify the following code or move them elsewhere
-beginLoadJSON("demo-data.json", shouldUseDefinitionAsFront)
+beginLoadJSON("demo-data.json", false)
 //termFontSizeMultiplier = 1/7
 //definitionFontSizeMultiplier = 1/12
