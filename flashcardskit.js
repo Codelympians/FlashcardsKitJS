@@ -1,7 +1,7 @@
 /* Customizable Variables */
 
 let name = "FlashcardsKitJS Demo"
-let termFontSizeMultiplier = 1/7
+let termFontSizeMultiplier = 1/6
 let definitionFontSizeMultiplier = 1/12
 let flashcards = []
 let congratulateCard = {
@@ -103,18 +103,23 @@ function displayFlashcard() {
 }
 
 function displayProgress() {
+    const numerator = flashcards.length - deck.length
+    
     // Progress bar - base rectangle
     fill(50)
     rect(16 + 100, 16 + 12, 200, 24)
   
     // Progress bar - progress
     fill(0, 160, 160)
-    rect(16 + 100 * (deck.length / flashcards.length), 16 + 12, 200 * (deck.length / flashcards.length), 24)
+    rect(16 + 100 * numerator / flashcards.length,
+         16 + 12, 
+         200 * numerator / flashcards.length, 
+         24)
   
     // Fraction text
     textAlign(LEFT, TOP)
     textSize(24)
-    text(`${deck.length}/${flashcards.length}`, 236, 16)
+    text(`${numerator}/${flashcards.length}`, 236, 16)
 }
   
 function displayCredits() {
