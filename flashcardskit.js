@@ -137,6 +137,11 @@ function displayName() {
     
 function checkIfLoaded() {
     if (!flashcards) {
+        // Attempt to load
+        if (userDefinedLoading) {
+            userDefinedLoading()
+        }
+        
         // Draw background
         rectMode(CENTER)
         fill(50)
@@ -170,6 +175,7 @@ function draw() {
     displayProgress()
     displayCredits()
     displayName()
+    checkIfLoaded()
 }
 
 function windowResized() {
