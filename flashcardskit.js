@@ -1,6 +1,6 @@
 /* Customizable Variables */
 
-let termFontSizeMultiplier = 1/6
+let termFontSizeMultiplier = 1/7
 let definitionFontSizeMultiplier = 1/12
 let flashcards = []
 let congratulateCard = {
