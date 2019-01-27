@@ -4,8 +4,8 @@ let termFontSizeMultiplier = 1/6
 let definitionFontSizeMultiplier = 1/12
 let flashcards = []
 let congratulateCard = {
-    term: "-CONGRATULATIONS-",
-    definition: "You've completed one entire set.",
+    term: "おめでとう!!",
+    definition: "Congratulations!\n(You've completed one entire set.)",
 }
 let shouldUseDefinitionAsFront = false
 
@@ -120,10 +120,11 @@ function displayFlashcard() {
     text(!shouldUseDefinitionAsFront ? currentCard.term : currentCard.definition, xCenter, frontCenterY);
   
     // Back
-    if (isShowingAnswer)
+    if (isShowingAnswer) {
         textSize(backFontSize)
         fill(100, 20, 20)
         text(!shouldUseDefinitionAsFront ? currentCard.definition : currentCard.term, xCenter, backCenterY)
+    }
   
     // Instructions
     let instructions = "click to show answers"
