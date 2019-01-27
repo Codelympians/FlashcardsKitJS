@@ -50,7 +50,8 @@ function cardSelect() {
         deck = flashcards.slice()
     } else {
         var chosenCard = Math.floor(Math.random() * deck.length)
-        currentCard = deck.splice(chosenCard, 1)
+        currentCard = deck[chosenCard]
+        deck.splice(chosenCard, 1)
     }
 }
   
