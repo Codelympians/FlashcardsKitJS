@@ -153,9 +153,9 @@ function displayProgress() {
   
 function displayCredits() {
     // Fraction text
-    fill(160, 0, 0)
+    fill(50, 0, 100)
     textAlign(RIGHT, BOTTOM)
-    textSize(12)
+    textSize(16)
     text("Powered by github.com/Codelympians/FlashcardsKitJS", windowWidth - 12, windowHeight - 12)
 }
     
