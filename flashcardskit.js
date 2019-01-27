@@ -61,7 +61,7 @@ function showCongratulateCard() {
 }
   
 function displayFlashcard() {
-    if (flashcards.length === 0) {
+    if (currentCard === null) {
         return
     }
     
