@@ -136,7 +136,7 @@ function displayName() {
 }
     
 function checkIfLoaded() {
-    if (!flashcards) {
+    if (flashcards.length === 0) {
         // Attempt to load
         if (userDefinedLoading) {
             userDefinedLoading()
