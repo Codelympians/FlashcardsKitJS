@@ -21,8 +21,8 @@ function didLoadJSON(loadedJSON) {
 
 // You can modify the following code or move them elsewhere
 function userDefinedLoading() {
-    //termFontSizeMultiplier = 1/7
-    //definitionFontSizeMultiplier = 1/12
+    termFontSizeMultiplier = 1/8
+    definitionFontSizeMultiplier = 1/14
     tryLoadingJSON("demo-data.json", false)
     console.log("Loading Process: didAttemptToLoad")
 }
