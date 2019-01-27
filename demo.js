@@ -1,10 +1,9 @@
 'use strict'
 
-let canLoadJSON = false
 let didAttemptToLoadJSON = false
 
 function tryLoadingJSON(filePath, shouldUseDefinitionAsFront) {
-    if (canLoadJSON && !didAttemptToLoadJSON) {
+    if (!didAttemptToLoadJSON) {
         loadJSON(filePath, didLoadJSON)
         shouldUseDefinitionAsFront = shouldUseDefinitionAsFront
         didAttemptToLoadJSON = true
