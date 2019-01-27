@@ -15,6 +15,7 @@ function didLoadJSON(loadedJSON) {
     name = loadedJSON.name
     congratulateCard = loadedJSON.congratulateCard
     flashcards = loadedJSON.flashcards
+    deck = flashcards.slice()
     console.log("Loading Process: didLoad")
 }
 
