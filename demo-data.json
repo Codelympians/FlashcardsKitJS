@@ -1,7 +1,7 @@
 {
   "name": "FlashcardsKitJS Demo",
   "congratulateCard": {
-    "term": "ni li pona!",
+    "term": "Grātulātiōnēs!",
     "definition": "Congratulations!\n(You've completed one entire set.)"
   },
   "flashcards": [
