@@ -39,28 +39,14 @@ function recalibrate() {
 let currentCard = null
 let isShowingAnswer = false
 let deck = []
-let completedIndices = []
 
 function cardSelect() {
-    if (completedIndices.length === deck.length) {
+    if (deck.length === 0) {
         showCongratulateCard()
+        deck = flashcards
     } else {
-        var cardAlreadyViewed = true
-        do {
-            var cardNotViewed = true
-            var chosenCard = Math.floor(Math.random() * deck.length)
-            currentCard = deck[chosenCard]
-            for (var cardIndex of completedIndices) {
-                if (cardIndex === chosenCard) {
-                    cardNotViewed = false
-                    break
-                }
-            }
-            if (cardNotViewed) {
-                cardAlreadyViewed = false
-                completedIndices.push(chosenCard)
-            }
-        } while (cardAlreadyViewed)
+        var chosenCard = Math.floor(Math.random() * deck.length)
+        currentCard = deck.splice(chosenCard, 1)
     }
 }
   
@@ -70,6 +56,10 @@ function showCongratulateCard() {
 }
   
 function displayFlashcard() {
+    if (flashcards.length === 0) {
+        return
+    }
+    
     const frontFontSize = !shouldUseDefinitionAsFront ? (cardHeight * termFontSizeMultiplier) : (cardHeight * definitionFontSizeMultiplier)
     const backFontSize = !shouldUseDefinitionAsFront ? (cardHeight * definitionFontSizeMultiplier) : (cardHeight * termFontSizeMultiplier)
     const instructionsFontSize = cardHeight * instructionsFontSizeMultiplier
