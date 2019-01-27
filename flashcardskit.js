@@ -17,12 +17,14 @@ const border = 100
 
 let cardWidth = null
 let cardHeight = null
-let xCenter = windowWidth / 2
-let yCenter = windowHeight / 2
+let xCenter = null
+let yCenter = null
 
 function recalibrate() {
-    const xUsable = windowWidth - border;
-    const yUsable = windowHeight - border;
+    const xUsable = windowWidth - border
+    const yUsable = windowHeight - border
+    xCenter = windowWidth / 2
+    yCenter = windowHeight / 2
 
     //if wider use height as boundary
     if (xUsable > yUsable * 4 / 3) {
