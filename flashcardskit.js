@@ -1,14 +1,14 @@
 /* Customizable Variables */
 
-let name = "FlashcardsKitJS Demo"
-let termFontSizeMultiplier = 1/7
-let definitionFontSizeMultiplier = 1/12
-let flashcards = []
-let congratulateCard = {
+var name = "FlashcardsKitJS Demo"
+var termFontSizeMultiplier = 1/7
+var definitionFontSizeMultiplier = 1/12
+var flashcards = []
+var congratulateCard = {
     term: "おめでとう!!",
     definition: "Congratulations!\n(You've completed one entire set.)",
 }
-let shouldUseDefinitionAsFront = false
+var shouldUseDefinitionAsFront = false
 
 /* Core Code */
 
