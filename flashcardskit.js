@@ -151,6 +151,14 @@ function displayProgress() {
     text(`${completedIndices.length}/${deck.length}`, 236, 16)
 }
   
+function displayCredits() {
+    // Fraction text
+    fill(160, 0, 0)
+    textAlign(RIGHT, BOTTOM)
+    textSize(12)
+    text("Powered by github.com/Codelympians/FlashcardsKitJS", windowWidth - 12, windowHeight - 12)
+}
+    
 function mousePressed() {
     if (isShowingAnswer) {
         cardSelect()
@@ -174,7 +182,7 @@ function draw() {
   
     // Update and show FPS
     fpsEngine.updateFPS()
-    fpsEngine.showFPS(0, 0, 0)
+    fpsEngine.showFPS(100, 100, 100)
 }
 
 function windowResized() {
