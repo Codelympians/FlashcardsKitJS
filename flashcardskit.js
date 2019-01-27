@@ -41,6 +41,10 @@ let isShowingAnswer = false
 let deck = []
 
 function cardSelect() {
+    if (flashcards.length === 0) {
+        return
+    }
+    
     if (deck.length === 0) {
         showCongratulateCard()
         deck = flashcards.slice()
@@ -109,7 +113,7 @@ function displayProgress() {
     // Fraction text
     textAlign(LEFT, TOP)
     textSize(24)
-    text(`${completedIndices.length}/${deck.length}`, 236, 16)
+    text(`${deck.length}/${flashcards.length}`, 236, 16)
 }
   
 function displayCredits() {
