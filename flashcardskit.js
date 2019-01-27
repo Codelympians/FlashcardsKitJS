@@ -134,6 +134,20 @@ function displayName() {
     textSize(24)
     text(name, width - 16, 16) // Position of the fps label
 }
+    
+function checkIfLoaded() {
+    if (!flashcards) {
+        // Draw background
+        rectMode(CENTER)
+        fill(50)
+        rect(xCenter, yCenter, cardWidth, cardHeight)
+
+        // Loading text
+        textSize(cardHeight * termFontSizeMultiplier)
+        fill(200)
+        text("Loading...", xCenter, yCenter);
+    }
+}
 
 function mousePressed() {
     if (isShowingAnswer) {
