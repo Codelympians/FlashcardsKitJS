@@ -108,7 +108,7 @@ function displayProgress() {
   
     // Progress bar - progress
     fill(0, 160, 160)
-    rect(16 + 100 * (completedIndices.length / deck.length), 16 + 12, 200 * (completedIndices.length / deck.length), 24)
+    rect(16 + 100 * (deck.length / flashcards.length), 16 + 12, 200 * (deck.length / flashcards.length), 24)
   
     // Fraction text
     textAlign(LEFT, TOP)
