@@ -153,6 +153,9 @@ function checkIfLoaded() {
         textSize(cardHeight * termFontSizeMultiplier)
         fill(200)
         text("Loading...", xCenter, yCenter);
+    } else if (currentCard === null) {
+        cardSelect()
+        isShowingAnswer = false
     }
 }
 
