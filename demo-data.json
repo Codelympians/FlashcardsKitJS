@@ -1,25 +1,25 @@
 {
-  "name": "Toki Pona Vocabulary",
+  "name": "FlashcardsKitJS Demo",
   "congratulateCard": {
     "term": "ni li pona!",
     "definition": "Congratulations!\n(You've completed one entire set.)"
   },
   "flashcards": [
     {
-      "term": "a / kin",
-      "definition": "<PARTICLE>\n(emphasis, emotion, or confirmation)"
+      "term": "Test1",
+      "definition": "Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit"
     },
     {
-      "term": "akesi",
-      "definition": "<NOUN> non-cute animal;\nreptile, amphibian"
+      "term": "Test2",
+      "definition": "sed do eiusmod tempor incididunt \nut labore et dolore magna aliqua. "
     },
     {
-      "term": "ala",
-      "definition": "<ADJECTIVE> no, not, zero"
+      "term": "Test3",
+      "definition": "Ut enim ad minim veniam, quis \nnostrud exercitation "
     },
     {
-      "term": "alasa",
-      "definition": "<VERB> to hunt, forage"
+      "term": "Test4",
+      "definition": "ullamco laboris nisi ut aliquip \nex ea commodo consequat."
     }
   ]
 }
