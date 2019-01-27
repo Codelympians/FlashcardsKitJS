@@ -24,5 +24,6 @@ function userDefinedLoading() {
     //termFontSizeMultiplier = 1/7
     //definitionFontSizeMultiplier = 1/12
     tryLoadingJSON("demo-data.json", false)
+    console.log("Loading Process: didAttemptToLoad")
 }
 
