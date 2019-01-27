@@ -1,8 +1,14 @@
 'use strict'
 
-function beginLoadJSON(filePath, shouldUseDefinitionAsFront) {
-    loadJSON(filePath, didLoadJSON)
-    shouldUseDefinitionAsFront = shouldUseDefinitionAsFront
+let canLoadJSON = false
+let didAttemptToLoadJSON = false
+
+function tryLoadingJSON(filePath, shouldUseDefinitionAsFront) {
+    if (canLoadJSON && !didAttemptToLoadJSON) {
+        loadJSON(filePath, didLoadJSON)
+        shouldUseDefinitionAsFront = shouldUseDefinitionAsFront
+        didAttemptToLoadJSON = true
+    }
 }
 
 function didLoadJSON(loadedJSON) {
@@ -12,6 +18,9 @@ function didLoadJSON(loadedJSON) {
 }
 
 // You can modify the following code or move them elsewhere
-beginLoadJSON("demo-data.json", false)
-//termFontSizeMultiplier = 1/7
-//definitionFontSizeMultiplier = 1/12
+function userDefinedLoading() {
+    //termFontSizeMultiplier = 1/7
+    //definitionFontSizeMultiplier = 1/12
+    tryLoadingJSON("demo-data.json", false)
+}
+
