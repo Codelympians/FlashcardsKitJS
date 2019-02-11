@@ -7,19 +7,19 @@
   "flashcards": [
     {
       "term": "Test1",
-      "definition": "Lorem ipsum dolor sit amet, \nconsectetur adipiscing elit"
+      "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       "term": "Test2",
-      "definition": "sed do eiusmod tempor incididunt \nut labore et dolore magna aliqua. "
+      "definition": "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     },
     {
       "term": "Test3",
-      "definition": "Ut enim ad minim veniam, quis \nnostrud exercitation "
+      "definition": "Ut enim ad minim veniam, quis nostrud exercitation "
     },
     {
       "term": "Test4",
-      "definition": "ullamco laboris nisi ut aliquip \nex ea commodo consequat."
+      "definition": "ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   ]
 }
