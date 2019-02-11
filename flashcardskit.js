@@ -1,3 +1,5 @@
+'use strict'
+
 /* Customizable Variables */
 
 let name = "FlashcardsKitJS Demo"
@@ -9,6 +11,27 @@ let congratulateCard = {
     definition: "Congratulations!\n(You've completed one entire set.)",
 }
 let shouldUseDefinitionAsFront = false
+
+/* Load JSON */
+
+let didAttemptToLoadJSON = false
+
+function tryLoadingJSON(filePath, shouldUseDefinitionAsFront) {
+    if (!didAttemptToLoadJSON) {
+        loadJSON(filePath, didLoadJSON)
+        shouldUseDefinitionAsFront = shouldUseDefinitionAsFront
+        didAttemptToLoadJSON = true
+        console.log("Loading Process: willLoad")
+    }
+}
+
+function didLoadJSON(loadedJSON) {
+    name = loadedJSON.name
+    congratulateCard = loadedJSON.congratulateCard
+    flashcards = loadedJSON.flashcards
+    deck = flashcards.slice()
+    console.log("Loading Process: didLoad")
+}
 
 /* Core Code */
 
