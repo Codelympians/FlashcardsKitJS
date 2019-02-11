@@ -80,7 +80,6 @@ function cardSelect() {
   
 function showCongratulateCard() {
     currentCard = congratulateCard
-    completedIndices = []
 }
 
 function displayFlashcard() {
