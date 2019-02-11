@@ -59,7 +59,7 @@ function showCongratulateCard() {
     currentCard = congratulateCard
     completedIndices = []
 }
-  
+
 function displayFlashcard() {
     if (currentCard === null) {
         return
@@ -72,8 +72,8 @@ function displayFlashcard() {
     textAlign(CENTER, CENTER)
     
     const frontCenterY = yCenter - cardHeight / 4
-    const backCenterY = yCenter
-    const instructionsCenterY = yCenter + cardHeight / 4
+    const backCenterY = yCenter + cardHeight / 8
+    const instructionsCenterY = yCenter + cardHeight / 2 - 10
     
     // Draw background
     rectMode(CENTER)
@@ -83,16 +83,17 @@ function displayFlashcard() {
     // Front
     textSize(frontFontSize)
     fill(20)
-    text(!shouldUseDefinitionAsFront ? currentCard.term : currentCard.definition, xCenter, frontCenterY);
+    text(!shouldUseDefinitionAsFront ? currentCard.term : currentCard.definition, xCenter, frontCenterY, cardWidth - 40, cardHeight / 3)
   
     // Back
     if (isShowingAnswer) {
         textSize(backFontSize)
         fill(100, 20, 20)
-        text(!shouldUseDefinitionAsFront ? currentCard.definition : currentCard.term, xCenter, backCenterY)
+        text(!shouldUseDefinitionAsFront ? currentCard.definition : currentCard.term, xCenter, backCenterY, cardWidth - 40, cardHeight / 3)
     }
   
     // Instructions
+    textAlign(CENTER, BOTTOM)
     let instructions = "click to show answers"
     if (isShowingAnswer) {
         instructions = "click to switch card"
