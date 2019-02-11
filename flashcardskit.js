@@ -72,7 +72,7 @@ function displayFlashcard() {
     textAlign(CENTER, CENTER)
     
     const frontCenterY = isShowingAnswer ? (yCenter - cardHeight / 4) : (yCenter - cardHeight / 12)
-    const backCenterY = yCenter + cardHeight / 8
+    const backCenterY = yCenter + cardHeight / 12
     const instructionsCenterY = yCenter + cardHeight / 2 - 10
     
     // Draw background
